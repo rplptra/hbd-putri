@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ucapan Ulang Tahun Romantis untuk Orang Tersayang">
+    <meta name="keywords" content="ulang tahun, romantis, ucapan, birthday, romantic">
+    <meta name="author" content="Your Name">
+    <title>Selamat Ulang Tahun Lathifa Amalia Putri ❤️</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤</text></svg>">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="overflow-x-hidden">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-heart">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2 class="loading-text font-dancing">Menyiapkan kejutan untuk Sayang...</h2>
+            <div class="loading-progress">
+                <div class="loading-bar"></div>
+            </div>
+            <p class="loading-subtitle font-poppins">Sedang menyiapkan kejutan untuk Putri tersayang ❤</p>
+        </div>
+    </div>
+
+    <!-- Parallax Background Elements -->
+    <div class="parallax-bg">
+        <div class="parallax-layer" data-speed="0.5">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+        <div class="parallax-layer" data-speed="0.3">
+            <div class="floating-shape shape-4"></div>
+            <div class="floating-shape shape-5"></div>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <!-- CARA MENGGANTI MUSIK: Upload file musik Anda ke folder music/ dan ganti nama file di bawah -->
+    <audio id="backgroundMusic" loop>
+        <source src="music/uiauuu.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music Control Button -->
+    <div class="music-control">
+        <button id="musicToggle" class="btn btn-pink rounded-circle shadow-lg">
+            <i class="fas fa-music"></i>
+        </button>
+    </div>
+
+    <!-- Floating Hearts and Balloons Container -->
+    <div id="floatingElements"></div>
+
+    <!-- Confetti Container -->
+    <div id="confetti"></div>
+
+    <!-- Main Content -->
+    <div class="container-fluid p-0">
+        <!-- Hero Section -->
+        <section class="hero-section min-vh-100 d-flex align-items-center justify-content-center position-relative">
+            <div class="hero-overlay"></div>
+            <div class="container text-center position-relative z-3">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8">
+                        <!-- Profile Photo -->
+                        <div class="profile-photo mb-4">
+                            <img src="photos/profile-photos.jpg" alt="Foto Pacar" class="profile-image">
+                        </div>
+                        
+                        <!-- Animated Heart Icon -->
+                        <div class="heart-icon mb-4">
+                            <i class="fas fa-heart text-pink animate-pulse"></i>
+                        </div>
+                        
+                        <!-- Typing Text -->
+                        <h1 class="display-3 font-dancing text-white mb-4">
+                            <span id="typingText"></span>
+                            <span class="cursor">|</span>
+                        </h1>
+                        
+                        <!-- Subtitle -->
+                        <p class="lead text-white-75 mb-5 font-poppins">
+                            Di hari spesial ini, aku ingin mengungkapkan betapa berartinya kamu dalam hidupku 
+                        </p>                        
+                        
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="gallery-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="text-center mb-5">
+                            <h2 class="display-4 font-dancing text-pink mb-3">Random Photo Ayang😻</h2>
+                            <p class="lead text-muted font-poppins">Being with you is the most beautiful gift</p>
+                        </div>
+                        
+                        <!-- Photo Carousel -->
+                        <!-- CARA MENGGANTI FOTO: Ganti URL di src dengan foto kenangan Anda -->
+                        <div id="photoCarousel" class="carousel slide shadow-lg rounded-3 overflow-hidden" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="photos/memory1.jpg" class="d-block w-100 carousel-image" alt="Kenangan 1">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="font-dancing">Si manis dari semarang</h5>
+                                        <p>You're so beautiful girl</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="photos/memory2.jpg" class="d-block w-100 carousel-image" alt="Kenangan 2">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="font-dancing">Tukang Tidur</h5>
+                                        <p>Setiap langkah bersamamu adalah kebahagiaan</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="photos/memory3.jpg" class="d-block w-100 carousel-image" alt="Kenangan 3">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="font-dancing">Annoying</h5>
+                                        <p>Tawa dan senyummu adalah obat terbaik</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="photos/memory4.jpg" class="d-block w-100 carousel-image" alt="Kenangan 4">
+                                    <div class="carousel-caption d-none d-md-block">
+                                        <h5 class="font-dancing">Senyumanmu</h5>
+                                        <p>Kecantikanmu adalah yang terindah</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Carousel Indicators -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active"></button>
+                                <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="3"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Birthday Message Section -->
+        <section class="message-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="message-card p-4 p-md-5 rounded-3 shadow-lg">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-birthday-cake text-pink display-1 mb-3"></i>
+                                <h2 class="display-4 font-dancing text-pink mb-3">Selamat Ulang Tahun Sayang!</h2>
+                            </div>
+                            
+                            <div class="message-content">
+                                <p class="font-poppins text-muted mb-4">
+                                    Sayangku yang terkasih,
+                                </p>
+                                
+                                <p class="font-poppins text-muted mb-4">
+                                    Di hari spesial ini, aku ingin mengucapkan selamat ulang tahun ke-18 yang penuh cinta untukmu. 
+                                    Setiap hari bersamamu meski terhalang jarak itu juga suatu anugerah yang tak ternilai. Kamu telah membawa warna-warni 
+                                    kebahagiaan dalam hidupku.
+                                </p>
+                                
+                                <p class="font-poppins text-muted mb-4">
+                                    Terima kasih telah menjadi sosok yang selalu mendukung, memahami, dan mencintaiku apa adanya. 
+                                    Semoga di ulang tahun mu yang baru ini, semua impian dan harapanmu menjadi kenyataan. 
+                                    Semoga kita selalu bersama dalam suka dan duka.
+                                </p>
+                                
+                                <p class="font-poppins text-muted mb-4">
+                                    Aku berjanji akan selalu berusaha menjadi yang terbaik untukmu. 
+                                    Selamat ulang tahun, cinta hatiku! <span class="text-pink">❤</span>
+                                </p>
+                            
+                                
+                                <div class="text-end">
+                                    <p class="font-dancing text-pink h4 mb-0">
+                                        Dengan cinta,<br>
+                                        Aku orang yang mencintaimu
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Timer Section -->
+        <section class="countdown-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="countdown-card p-4 p-md-5 rounded-3 shadow-lg text-center">
+                            <h2 class="display-4 font-dancing text-pink mb-3">28 Juli 2025</h2>
+                            <p id="currentAge" class="font-poppins text-pink h5 mb-3">Selamat Ulang Tahun Usia ke 18 tahun</p>
+                            <p class="font-poppins text-muted mb-4">Menghitung Ulang Tahun Berikutnya yang ke - 19...</p>
+                            
+                            <div id="countdown" class="countdown-timer row">
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="countdown-item">
+                                        <div class="countdown-number" id="days">0</div>
+                                        <div class="countdown-label">Hari</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="countdown-item">
+                                        <div class="countdown-number" id="hours">0</div>
+                                        <div class="countdown-label">Jam</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="countdown-item">
+                                        <div class="countdown-number" id="minutes">0</div>
+                                        <div class="countdown-label">Menit</div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-3 mb-3">
+                                    <div class="countdown-item">
+                                        <div class="countdown-number" id="seconds">0</div>
+                                        <div class="countdown-label">Detik</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Quotes Section -->
+        <section class="quotes-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="text-center mb-5">
+                            <h2 class="display-4 font-dancing text-pink mb-3">Kata-Kata Spesial</h2>
+                            <p class="lead text-muted font-poppins">Quote yang selalu aku ingat tentang kita</p>
+                        </div>
+                        
+                        <div class="quotes-carousel">
+                            <div class="quote-item active p-4 p-md-5 rounded-3 shadow-lg text-center">
+                                <i class="fas fa-quote-left text-pink display-4 mb-3"></i>
+                                <p class="quote-text font-poppins h4 mb-4">"Cinta sejati tidak pernah berakhir. Kekasih mungkin pergi, tetapi mereka tidak pernah pergi sepenuhnya."</p>
+                                <p class="quote-author font-dancing text-pink h5">- Paulo Coelho</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memories Timeline Section -->
+        <section class="timeline-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+                        <div class="text-center mb-5">
+                            <h2 class="display-4 font-dancing text-pink mb-3">Perjalanan Cinta Kita</h2>
+                            <p class="lead text-muted font-poppins">Cerita indah yang telah kita tulis bersama</p>
+                        </div>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4 class="font-dancing text-pink">Mulai Pacaran</h4>
+                                    <p class="font-poppins text-muted">18 Juli 2021 - Hari dimana kita resmi berkomitmen untuk saling menjaga dan mencintai. Sebuah janji yang akan selalu aku pegang teguh.</p>
+                                    <small class="text-muted">18 Juli 2021 - Awal perjalanan cinta kita</small>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-train"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4 class="font-dancing text-pink">Pertemuan Pertama di Semarang</h4>
+                                    <p class="font-poppins text-muted">15 Juli 2023 - Setelah pandemi COVID, akhirnya aku bisa pergi ke Semarang menemuimu seorang diri. Perasaan senang yang tak terhingga!</p>
+                                    <small class="text-muted">15 Juli 2023 - Moment yang ditunggu-tunggu</small>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-film"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4 class="font-dancing text-pink">Kencan Seharian di Semarang</h4>
+                                    <p class="font-poppins text-muted">Nonton bioskop bersama, main wahana seru, jalan-jalan ke Lawang Sewu yang bersejarah, makan enak, dan pulang jam 8 malam. Hari yang tak akan pernah terlupakan!</p>
+                                    <small class="text-muted">15 Juli 2023 - Perfect date yang penuh kenangan</small>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-birthday-cake"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4 class="font-dancing text-pink">Hari Ini</h4>
+                                    <p class="font-poppins text-muted">Ulang tahunmu yang spesial. Hari dimana aku ingin menunjukkan betapa berartinya kamu dalam hidupku.</p>
+                                    <small class="text-muted">Selamat ulang tahun, sayangku!</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Surprise Section -->
+        <section class="surprise-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="text-center">
+                            <h3 class="font-dancing text-pink mb-4">Ada Kejutan Untukmu!</h3>
+                            <p class="font-poppins text-muted mb-4">Klik tombol di bawah untuk melihat kejutan spesial</p>
+                            
+                            <button onclick="showSurprise()" class="btn btn-pink btn-lg rounded-pill px-5 py-3 shadow-lg mb-4">
+                                <i class="fas fa-gift me-2"></i>
+                                Buka Kejutan
+                            </button>
+                            
+                            <div id="surpriseMessage" class="surprise-content d-none">
+                                <div class="surprise-card p-4 rounded-3 shadow-lg">
+                                    <i class="fas fa-heart text-pink display-2 mb-3"></i>
+                                    <h4 class="font-dancing text-pink mb-3">Surprise!</h4>
+                                    <p class="font-poppins text-muted">
+                                        Aku membuat website ini khusus untukmu karena kata-kata saja tidak cukup untuk mengekspresikan cintaku. 
+                                        Setiap detail di sini dibuat dengan cinta dan harapan bahwa kamu akan selalu bahagia. 
+                                        Happy Birthday, my love! <span class="text-pink">❤</span>
+                                    </p>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Messages Section -->
+        <section class="love-messages-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="text-center mb-5">
+                            <h2 class="display-4 font-dancing text-pink mb-3">Pesan Cinta untuk Putri</h2>
+                            <p class="lead text-muted font-poppins">Kata-kata yang ingin selalu kusampaikan</p>
+                        </div>
+                        
+                        <div class="love-message-card p-4 p-md-5 rounded-3 shadow-lg mb-4">
+                            <div class="row align-items-center">
+                                <div class="col-md-2 text-center mb-3 mb-md-0">
+                                    <i class="fas fa-heart text-pink display-3"></i>
+                                </div>
+                                <div class="col-md-10">
+                                    <h4 class="font-dancing text-pink mb-3">Alasan Aku Mencintaimu:</h4>
+                                    <ul class="love-reasons font-poppins text-muted">
+                                        <li class="mb-2">🌹 Senyummu yang selalu menerangi hariku</li>
+                                        <li class="mb-2">💕 Cara kamu peduli dengan orang-orang di sekitarmu</li>
+                                        <li class="mb-2">✨ Keceriaanmu yang menular dan membuatku bahagia</li>
+                                        <li class="mb-2">🌟 Ketulusan hatimu yang selalu menghangatkan</li>
+                                        <li class="mb-2">💖 Cara kamu menjadi dirimu yang lebih baik</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="wishes-card p-4 p-md-5 rounded-3 shadow-lg">
+                            <div class="text-center">
+                                <i class="fas fa-star text-pink display-3 mb-3"></i>
+                                <h4 class="font-dancing text-pink mb-3">Harapanku untuk mu:</h4>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="wish-item p-3 rounded">
+                                            <i class="fas fa-graduation-cap text-pink mb-2"></i>
+                                            <p class="font-poppins text-muted mb-0">Semoga sukses dalam pendidikan dan meraih semua cita-citamu</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="wish-item p-3 rounded">
+                                            <i class="fas fa-heart-pulse text-pink mb-2"></i>
+                                            <p class="font-poppins text-muted mb-0">Selalu sehat, bahagia, dan dilindungi dari segala hal buruk</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="wish-item p-3 rounded">
+                                            <i class="fas fa-rainbow text-pink mb-2"></i>
+                                            <p class="font-poppins text-muted mb-0">Hidup penuh warna dan kebahagiaan di setiap langkahmu</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="wish-item p-3 rounded">
+                                            <i class="fas fa-infinity text-pink mb-2"></i>
+                                            <p class="font-poppins text-muted mb-0">Kita berdua selalu bersama menghadapi masa depan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Heart Collection Game Section -->
+        <section class="game-section py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <div class="game-card p-4 p-md-5 rounded-3 shadow-lg text-center bg-white">
+                            <h2 class="display-4 font-dancing text-pink mb-3">Game Cinta untuk Ayang</h2>
+                            <p class="lead text-muted font-poppins mb-4">
+                                Kumpulkan hearts sebanyak-banyaknya dengan klik di area ini! 
+                                <span class="text-pink">❤</span>
+                            </p>                              
+                            
+                            <div class="game-stats mb-4">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="stat-item p-3 rounded bg-pink-light">
+                                            <div class="stat-number display-6 font-dancing text-pink" id="heartScore">0</div>
+                                            <div class="stat-label font-poppins text-muted">Hearts Collected</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="stat-item p-3 rounded bg-pink-light">
+                                            <div class="stat-number h4 font-dancing text-pink" id="loveLevel">Pemula</div>
+                                            <div class="stat-label font-poppins text-muted">Love Level</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="gameArea" class="game-area p-5 rounded-3 position-relative border border-pink" style="min-height: 200px; cursor: pointer; background: linear-gradient(45deg, #fdf2f8, #fce7f3);">
+                                <p class="font-poppins text-muted mb-2">Klik di area ini untuk mengumpulkan hearts!</p>
+                                <small class="text-muted">Tips: Double-click untuk bonus hearts!</small>
+                            </div>
+                            
+                            <div class="game-controls mt-4">
+                                <button id="resetGame" class="btn btn-outline-pink px-4 py-2 font-poppins me-2">
+                                    <i class="fas fa-redo me-2"></i>Reset Game
+                                </button>
+                                <button id="shareScore" class="btn btn-pink px-4 py-2 font-poppins">
+                                    <i class="fas fa-share me-2"></i>Share Score
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WhatsApp Reply Section -->
+        <section class="whatsapp-section py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6">
+                        <div class="text-center">
+                            <div class="mb-4">
+                                <i class="fab fa-whatsapp text-success display-1"></i>
+                            </div>
+                            <h3 class="font-dancing text-pink mb-3">Balas Ucapanku</h3>
+                            <p class="font-poppins text-muted mb-4">
+                                Klik tombol di bawah untuk membalas ucapan ulang tahun ini lewat WhatsApp
+                            </p>
+                            
+                            <!-- CARA MENGGANTI NOMOR WHATSAPP: Ganti nomor di onclick="openWhatsApp()" di file script.js -->
+                            <button onclick="openWhatsApp()" class="btn btn-success btn-lg rounded-pill px-5 py-3 shadow-lg">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                Balas via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer-section py-4">
+            <div class="container">
+                <div class="text-center">
+                    <p class="font-dancing text-pink h4 mb-2">Made with ❤ for someone special</p>
+                    <p class="font-poppins text-muted small">
+                        Website ini dibuat khusus untuk Sayangku dengan sepenuh hati<br>
+                        Happy Birthday, Putri Sayang! 🎂✨
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap 5 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
